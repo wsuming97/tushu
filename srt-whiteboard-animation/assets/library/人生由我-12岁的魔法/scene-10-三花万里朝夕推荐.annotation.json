@@ -1,0 +1,32 @@
+{
+  "sceneId": "scene-10",
+  "canvas": {
+    "width": 1376,
+    "height": 768
+  },
+  "storyBasis": "三花万里朝夕推荐《人生由我》",
+  "sceneDurationMs": 20000,
+  "elements": [
+    {
+      "id": "book_and_bookmark",
+      "label": "《人生由我》书本与三花书签",
+      "sequence": 1,
+      "narrativeRole": "点击下方链接带书回家，优雅坚韧成长",
+      "subtitle": "关注三花万里朝夕，读一读梅耶的《人生由我》",
+      "type": "prop",
+      "region": {
+        "x": 100,
+        "y": 100,
+        "width": 1150,
+        "height": 620
+      },
+      "reveal": {
+        "direction": "top_to_bottom",
+        "startMs": 500,
+        "durationMs": 18000,
+        "maskPaddingPx": 20,
+        "protectedRegions": []
+      }
+    }
+  ]
+}

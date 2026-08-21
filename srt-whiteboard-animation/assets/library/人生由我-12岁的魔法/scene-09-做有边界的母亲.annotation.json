@@ -1,0 +1,32 @@
+{
+  "sceneId": "scene-09",
+  "canvas": {
+    "width": 1376,
+    "height": 768
+  },
+  "storyBasis": "十二岁的魔法章节与放飞纸飞机",
+  "sceneDurationMs": 15000,
+  "elements": [
+    {
+      "id": "magic_chapter",
+      "label": "翻开的十二岁的魔法书本",
+      "sequence": 1,
+      "narrativeRole": "把人生的决定权还给孩子",
+      "subtitle": "做一个有边界的妈妈，把决定权彻底还给他们",
+      "type": "prop",
+      "region": {
+        "x": 50,
+        "y": 50,
+        "width": 1250,
+        "height": 680
+      },
+      "reveal": {
+        "direction": "left_to_right",
+        "startMs": 500,
+        "durationMs": 13500,
+        "maskPaddingPx": 20,
+        "protectedRegions": []
+      }
+    }
+  ]
+}

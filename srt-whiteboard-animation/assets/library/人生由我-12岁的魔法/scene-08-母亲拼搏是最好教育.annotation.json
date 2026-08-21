@@ -1,0 +1,32 @@
+{
+  "sceneId": "scene-08",
+  "canvas": {
+    "width": 1376,
+    "height": 768
+  },
+  "storyBasis": "母亲努力成为更好的自己",
+  "sceneDurationMs": 20000,
+  "elements": [
+    {
+      "id": "maye_role_model",
+      "label": "知性挺拔的榜样母亲梅耶",
+      "sequence": 1,
+      "narrativeRole": "每天做五份工作依然体面拼搏的单身母亲",
+      "subtitle": "最好的教育，就是让他们看见你在努力成为更好的自己",
+      "type": "character",
+      "region": {
+        "x": 300,
+        "y": 50,
+        "width": 750,
+        "height": 680
+      },
+      "reveal": {
+        "direction": "top_to_bottom",
+        "startMs": 500,
+        "durationMs": 18000,
+        "maskPaddingPx": 20,
+        "protectedRegions": []
+      }
+    }
+  ]
+}

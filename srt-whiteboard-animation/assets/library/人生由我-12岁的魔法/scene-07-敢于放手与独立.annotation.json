@@ -1,0 +1,32 @@
+{
+  "sceneId": "scene-07",
+  "canvas": {
+    "width": 1376,
+    "height": 768
+  },
+  "storyBasis": "宿舍地板铺床垫读书与不过度保护",
+  "sceneDurationMs": 24000,
+  "elements": [
+    {
+      "id": "three_students",
+      "label": "地板上读书申请贷款的孩子们",
+      "sequence": 1,
+      "narrativeRole": "自主申请大学与贷款的三个孩子",
+      "subtitle": "没有必要过度保护，这只会造成与责任脱节",
+      "type": "character",
+      "region": {
+        "x": 100,
+        "y": 100,
+        "width": 1150,
+        "height": 620
+      },
+      "reveal": {
+        "direction": "left_to_right",
+        "startMs": 500,
+        "durationMs": 22000,
+        "maskPaddingPx": 20,
+        "protectedRegions": []
+      }
+    }
+  ]
+}

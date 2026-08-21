@@ -1,0 +1,53 @@
+{
+  "sceneId": "scene-02",
+  "canvas": {
+    "width": 1376,
+    "height": 768
+  },
+  "storyBasis": "梅耶与三位功成名就的儿女",
+  "sceneDurationMs": 24000,
+  "elements": [
+    {
+      "id": "maye_center",
+      "label": "白发大笑的母亲梅耶",
+      "sequence": 1,
+      "narrativeRole": "培养首富的硬核妈妈",
+      "subtitle": "一个堪称奇迹的母亲：梅耶·马斯克",
+      "type": "character",
+      "region": {
+        "x": 400,
+        "y": 150,
+        "width": 320,
+        "height": 580
+      },
+      "reveal": {
+        "direction": "top_to_bottom",
+        "startMs": 500,
+        "durationMs": 11000,
+        "maskPaddingPx": 20,
+        "protectedRegions": []
+      }
+    },
+    {
+      "id": "three_children",
+      "label": "埃隆、金博尔与托斯卡",
+      "sequence": 2,
+      "narrativeRole": "首富埃隆、食物企业家金博尔、导演托斯卡",
+      "subtitle": "二儿子是食物企业家，小女儿则是知名导演",
+      "type": "character",
+      "region": {
+        "x": 50,
+        "y": 100,
+        "width": 1250,
+        "height": 620
+      },
+      "reveal": {
+        "direction": "left_to_right",
+        "startMs": 12000,
+        "durationMs": 11000,
+        "maskPaddingPx": 20,
+        "protectedRegions": []
+      }
+    }
+  ]
+}

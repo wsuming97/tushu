@@ -1,0 +1,38 @@
+# ── 1. 敏感配置与密钥（严格禁止提交） ──
+.env
+*.env
+*.env.local
+*.env.*.local
+!*.env.example
+
+# ── 2. Python 虚拟环境与编译缓存 ──
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# ── 3. 渲染生成的大体积文件（视频/音频/临时生成物） ──
+**/output/
+**/.tempmediaStorage/
+*.mp4
+*.wav
+*.avi
+*.mov
+*.mkv
+aligned_temp/
+podcast_scenes_0.8/
+podcast_test/
+
+# ── 4. IDE 与系统缓存 ──
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

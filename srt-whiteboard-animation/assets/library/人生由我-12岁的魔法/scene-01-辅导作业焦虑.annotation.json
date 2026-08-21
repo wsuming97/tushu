@@ -1,0 +1,53 @@
+{
+  "sceneId": "scene-01",
+  "canvas": {
+    "width": 1376,
+    "height": 768
+  },
+  "storyBasis": "辅导作业焦虑与亲子紧绷",
+  "sceneDurationMs": 28000,
+  "elements": [
+    {
+      "id": "anxious_mother",
+      "label": "疲惫焦躁的母亲",
+      "sequence": 1,
+      "narrativeRole": "面对成堆作业叹气的母亲",
+      "subtitle": "你是不是也每天为了孩子作业鸡飞狗跳？",
+      "type": "character",
+      "region": {
+        "x": 300,
+        "y": 100,
+        "width": 450,
+        "height": 600
+      },
+      "reveal": {
+        "direction": "top_to_bottom",
+        "startMs": 500,
+        "durationMs": 13000,
+        "maskPaddingPx": 20,
+        "protectedRegions": []
+      }
+    },
+    {
+      "id": "rebellious_kid",
+      "label": "抗拒叛逆的孩子",
+      "sequence": 2,
+      "narrativeRole": "双手抱胸抗拒的孩子",
+      "subtitle": "越用力孩子越叛逆，亲子关系越紧绷",
+      "type": "character",
+      "region": {
+        "x": 750,
+        "y": 300,
+        "width": 350,
+        "height": 420
+      },
+      "reveal": {
+        "direction": "top_to_bottom",
+        "startMs": 14000,
+        "durationMs": 13000,
+        "maskPaddingPx": 20,
+        "protectedRegions": []
+      }
+    }
+  ]
+}
