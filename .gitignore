@@ -29,7 +29,10 @@ aligned_temp/
 podcast_scenes_0.8/
 podcast_test/
 
-# ── 4. IDE 与系统缓存 ──
+# ── 4. 版权电子书与大体积原著 ──
+*.pdf
+
+# ── 5. IDE 与系统缓存 ──
 .vscode/
 .idea/
 .DS_Store

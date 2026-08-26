@@ -1,0 +1,7 @@
+interface:
+  display_name: "可信转化文案核验优化"
+  short_description: "在文案生成后自动完成评分拆解、事实核验、风险修正和高转化优化"
+  default_prompt: "Use $copywriting-verify-optimize to create or review this sales script, verify its claims, score it, and produce a more credible high-conversion version."
+
+policy:
+  allow_implicit_invocation: true
