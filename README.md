@@ -1,7 +1,7 @@
 # 🎨 AI 内容创作技能套件 (AI Content Creator Suite)
 
 > 面向 **微信视频号 / 快手 / 抖音 / 小红书 / 微信公众号** 的全流程 AI 视觉与音视频商业内容生产工作流工具包。  
-> 涵盖 **选题策划 → 深度双轨文案创作 → 6维严格质检 → 国内自媒体风控预审 → 剪映播客级 TTS 配音 → 60fps 白板流式手绘动画渲染 → 四平台矩阵分发** 完整闭环。
+> 严格践行 **1.微信读书调研 ➔ 5.飞书看板建档 ➔ 4.合规风控预审 ➔ 3.6维质检打分 ➔ 2.终稿文案分镜 ➔ 6.视听声画出片** 标准商业流水线。
 
 ---
 
@@ -9,7 +9,7 @@
 
 ```text
 .
-├── 📚 copywriting-library/          # 技能 1：文案素材库（双轨框架、视觉指南、分主题口播文案库）
+├── 📚 copywriting-library/          # 技能 1：文案素材库（双轨框架、视觉指南、分主题口播文案库、飞书同步）
 ├── ✍️ copywriting-verify-optimize/   # 技能 2：商业文案 6 维质检评分、事实核验与转化优化
 ├── 🛡️ publish-precheck/             # 技能 3：国内自媒体发布前风控自审与保意违禁词修复
 ├── 🎴 ai-quote-card-maker/          # 技能 4：爆款金句卡片 & 贴图故事号全套生成
@@ -20,28 +20,25 @@
 
 ---
 
-## 🔄 全流程生产闭环 (End-to-End Workflow)
+## 🔄 标准生产流水线 (1.5.4.3.2.6 闭环)
 
 ```mermaid
 graph TD
-    A["📖 原著提取与选题策划<br/>(copywriting-library)"] --> B["📝 双轨文案撰写<br/>(带货长视频 + 流量中视频)"]
-    B --> C["🔍 6 维质量核验与评分<br/>(copywriting-verify-optimize)"]
-    C --> D["🛡️ 自媒体合规与风控预审<br/>(publish-precheck)"]
-    D --> E["🎙️ 剪映磁性男声 TTS 合成<br/>(0.90x 从容速 + -16 LUFS)"]
-    D --> F["🎨 暖米黄底电影级手绘分镜<br/>(9:16 三层景深插画)"]
-    E --> G["🎬 流式手绘动态渲染与混流<br/>(srt-whiteboard-animation)"]
-    F --> G
-    G --> H["📹 交付全案成品<br/>(MP4 视频 + 微信/快手/抖音/小红书四平台文案)"]
+    S1["1. 微信读书 6 维读者洞察 (weread_fetcher.py)<br/>• 采样 20~40 条真实长评，提取 pain/scene/belief"] --> S5["5. 飞书多维表格建档 (lark_base_sync.py)<br/>• 第一时间建档入看板，团队可视化追踪"]
+    S5 --> S4["4. 平台合规风控预审 (publish-precheck/scan.py)<br/>• 扫描广告法极值词/敏感词，自动保意修复"]
+    S4 --> S3["3. 6 维商业文案质检 (copywriting-verify-optimize)<br/>• 事实/共鸣/转化/留存/匹配/风控打分 (≥85分放行)"]
+    S3 --> S2["2. 定稿双轨文案与动作分镜 (visual_action_storyboard)<br/>• 深度带货款 12m + 爆款流量款 4m + 老渔吖同款四平台文案"]
+    S2 --> S6["6. 声画合成与白板手绘成片 (tts-voiceover & srt-whiteboard)<br/>• 剪映磁性男声 0.90x + 60fps 暖米黄底流式手绘成片"]
 ```
 
 ---
 
 ## 🛠️ 模块详解 (Module Details)
 
-### 1. 📚 [文案素材库 (`copywriting-library`)](./copywriting-library/)
-- **双轨创作协议**：支持【深度带货款】（6~12分钟，深度认知重构+挂车促单闭环）与【爆款流量款】（2~4分钟，密集金句高完播）。
-- **五阶递进模型**：黄金钩子 → 痛点共鸣 → 认知重塑 → 解决方案 → 赋能促单。
-- **全案实战库**：沉淀《一个人的老后》等全套 10 大观点分章节逐字稿及全书 12 分钟全景大长篇。
+### 1. 📚 [文案素材库与创作引擎 (`copywriting-library`)](./copywriting-library/)
+- **微信读书 6 维读者洞察**：采样 20~40 条读者真实书评，提炼真实困境(`pain`)、生活场景(`scene`)与认知觉醒(`belief`)。
+- **动作级视觉分镜标准**：拒绝抽象假大空，强制基于“具体动作与生活道具”切分分镜。
+- **飞书多维表格实时同步**：支持全自动双向同步看板，带货/流量双轨分离。
 
 ### 2. ✍️ [文案审核与优化 (`copywriting-verify-optimize`)](./copywriting-verify-optimize/)
 - **6 维商业质检体系**：事实可信度(25分)、共鸣与懂感(20分)、转化与逻辑(20分)、留存与互动(15分)、产品匹配(10分)、风控合规(10分)。
@@ -76,40 +73,13 @@ graph TD
 确保已安装 Python 3.10+ 及 ffmpeg：
 
 ```bash
-# 安装基础依赖
 pip install requests pillow numpy opencv-python pydub imageio-ffmpeg python-dotenv
 ```
 
-### 2. 配置 TTS 密钥
-复制 `tts-voiceover/.env.example` 为 `.env`，填入你的 API 凭证：
-
+### 2. 运行一键飞书同步测试
 ```bash
-cp tts-voiceover/.env.example tts-voiceover/.env
-# 在 .env 中填入 VOLCANO_API_KEY (或 Seed-TTS Key)
+python copywriting-library/scripts/lark_base_sync.py --topic_dir "./copywriting-library/topics/一个人的老后/"
 ```
-
-### 3. 运行示例
-
-#### 运行文案敏感词扫描：
-```bash
-python publish-precheck/scripts/scan.py --input "测试口播稿.md"
-```
-
-#### 运行白板动画流式渲染：
-```bash
-python srt-whiteboard-animation/scripts/render_stream_whiteboard.py --help
-```
-
-#### 运行声画字幕一键合成：
-```bash
-python tts-voiceover/scripts/srt_to_voice.py --help
-```
-
----
-
-## 🔒 开源合规与安全性
-- 本仓库已配置严格的 `.gitignore` 机制，**绝不提交任何私有 API 密钥、密码、本地环境绝对路径、版权图书 PDF 及大体积音视频生成物**。
-- 所有脚本均使用相对路径与动态环境变量设计，开箱即用。
 
 ---
 
