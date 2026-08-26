@@ -43,7 +43,7 @@ graph TD
     "author": "上野千鹤子",
     "rating": "8.6",
     "reading_count": "150000+",
-    "core_tags": ["女性成长", "独居养老", "生活哲学", "生前整理"]
+    "core_tags": ["女性成长", "独居养老", "生活哲学", "生活减法与断舍离"]
   },
   "reader_insights": {
     "top_pains": [
