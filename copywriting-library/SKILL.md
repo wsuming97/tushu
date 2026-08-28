@@ -17,7 +17,7 @@ graph TD
     S5 --> S4["4. 平台合规风控预审 (publish-precheck/scan.py)<br/>• 扫描广告法极值词/敏感词，自动保意修复"]
     S4 --> S3["3. 6 维商业文案质检 (copywriting-verify-optimize)<br/>• 事实/共鸣/转化/留存/匹配/风控打分 (≥85分放行)"]
     S3 --> S2["2. 定稿双轨文案与动作分镜 (four_tier_conversion & storyboard)<br/>• 深度带货款 12m + 爆款流量款 4m + 老渔吖同款四平台文案"]
-    S2 --> S6["6. 声画合成与白板手绘成片 (tts-voiceover & srt-whiteboard)<br/>• 剪映磁性男声 0.90x + 60fps 暖米黄底流式手绘成片"]
+    S2 --> S6["6. 声画合成与白板手绘成片 (tts-voiceover & srt-whiteboard)<br/>• 剪映磁性男声 0.95x 黄金速 + 60fps 暖米黄底流式手绘成片"]
 ```
 
 ---

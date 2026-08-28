@@ -14,7 +14,7 @@
 ├── 🛡️ publish-precheck/             # 技能 3：国内自媒体发布前风控自审与保意违禁词修复
 ├── 🎴 ai-quote-card-maker/          # 技能 4：爆款金句卡片 & 贴图故事号全套生成
 ├── 🎬 srt-whiteboard-animation/     # 技能 5：SRT 字幕驱动的 60fps 白板流式手绘动画引擎
-├── 🎙️ tts-voiceover/                # 技能 6：剪映/火山引擎 VIP 播客级磁性配音与声画合成
+├── 🎙️ tts-voiceover/                # 技能 6：剪映/火山引擎 VIP 播客级磁性配音与声画合成 (0.95x 黄金速)
 └── 🎞️ native-subtitle-quote-image/  # 技能 7：原生字幕截帧与社交长图拼图工具
 ```
 
@@ -27,8 +27,8 @@ graph TD
     S1["1. 微信读书 6 维读者洞察 (weread_fetcher.py)<br/>• 采样 20~40 条真实长评，提取 pain/scene/belief"] --> S5["5. 飞书多维表格建档 (lark_base_sync.py)<br/>• 第一时间建档入看板，团队可视化追踪"]
     S5 --> S4["4. 平台合规风控预审 (publish-precheck/scan.py)<br/>• 扫描广告法极值词/敏感词，自动保意修复"]
     S4 --> S3["3. 6 维商业文案质检 (copywriting-verify-optimize)<br/>• 事实/共鸣/转化/留存/匹配/风控打分 (≥85分放行)"]
-    S3 --> S2["2. 定稿双轨文案与动作分镜 (visual_action_storyboard)<br/>• 深度带货款 12m + 爆款流量款 4m + 老渔吖同款四平台文案"]
-    S2 --> S6["6. 声画合成与白板手绘成片 (tts-voiceover & srt-whiteboard)<br/>• 剪映磁性男声 0.90x + 60fps 暖米黄底流式手绘成片"]
+    S3 --> S2["2. 定稿双轨文案与动作分镜 (four_tier_conversion & storyboard)<br/>• 深度带货款 12m + 爆款流量款 4m + 老渔吖同款四平台文案"]
+    S2 --> S6["6. 声画合成与白板手绘成片 (tts-voiceover & srt-whiteboard)<br/>• 剪映磁性男声 0.95x 黄金速 + 60fps 暖米黄底流式手绘成片"]
 ```
 
 ---
@@ -37,7 +37,7 @@ graph TD
 
 ### 1. 📚 [文案素材库与创作引擎 (`copywriting-library`)](./copywriting-library/)
 - **微信读书 6 维读者洞察**：采样 20~40 条读者真实书评，提炼真实困境(`pain`)、生活场景(`scene`)与认知觉醒(`belief`)。
-- **动作级视觉分镜标准**：拒绝抽象假大空，强制基于“具体动作与生活道具”切分分镜。
+- **四层递进带货法**：严格按照 **共情 ➔ 亏欠 ➔ 痛点 ➔ 出口** 四层转化逻辑，注入生活毛刺细节，拒绝空洞排比句。
 - **飞书多维表格实时同步**：支持全自动双向同步看板，带货/流量双轨分离。
 
 ### 2. ✍️ [文案审核与优化 (`copywriting-verify-optimize`)](./copywriting-verify-optimize/)
@@ -59,7 +59,7 @@ graph TD
 
 ### 6. 🎙️ [TTS 播客级配音与成片合成 (`tts-voiceover`)](./tts-voiceover/)
 - **多引擎支持**：接入 **火山引擎（豆包语音）Seed-TTS 2.0 / Agent Plan**，全面支持剪映 VIP 官方同款【磁性男声】（`zh_male_m191_uranus_bigtts`）。
-- **微沉浸调优**：内置 0.90x~0.95x 沉淀从容语速与 0.5s 开场静谧入场垫音，彻底解决开场急促感。
+- **微沉浸调优**：内置 **0.95x 黄金微沉浸语速** 与 0.4s 开场静谧入场垫音，彻底告别急促与拖沓。
 - **广播级响度**：内置 EBU R128 (`loudnorm=I=-16:TP=-1.5:LRA=11`) 动态响度标准化。
 
 ### 7. 🎞️ [原生字幕长图拼接 (`native-subtitle-quote-image`)](./native-subtitle-quote-image/)
