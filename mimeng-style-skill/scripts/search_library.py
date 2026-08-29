@@ -1,6 +1,10 @@
 import sys, re, json, argparse
 from pathlib import Path
 
+# 确保 Windows 控制台 UTF-8 输出
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 SKILL_DIR = Path(__file__).resolve().parent.parent
 REF_DIR = SKILL_DIR / "references"
 

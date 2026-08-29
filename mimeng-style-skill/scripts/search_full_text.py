@@ -1,11 +1,13 @@
-import sys, re, json, argparse
+import sys, re, json, argparse, csv
 from pathlib import Path
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 INDEX_PATH = Path(r"D:\suming\wiki\playbooks\1012篇爆款文章深度拆解总表.csv")
 CORPUS_DIR = Path(r"D:\suming\raw\pdf-corpus")
 
 def search_full_text(query, top_k=5):
-    import csv
     if not INDEX_PATH.exists():
         print(f"索引文件不存在: {INDEX_PATH}")
         return []

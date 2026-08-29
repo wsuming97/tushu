@@ -1,6 +1,9 @@
 import sys, csv, argparse
 from pathlib import Path
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 INDEX_PATH = Path(r"D:\suming\wiki\playbooks\1012篇爆款文章深度拆解总表.csv")
 
 def inspect_case(title_or_id):
