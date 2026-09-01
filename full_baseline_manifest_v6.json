@@ -1,0 +1,717 @@
+{
+  "manifest_version": "6.6.0_git_blob_lf_baseline",
+  "generated_at": "2026-09-01T22:50:00+08:00",
+  "git_toplevel": "${SKILLS_REPO_ROOT}",
+  "hash_scope": "git_index_blob_bytes",
+  "line_ending_policy": "LF",
+  "notice": "This manifest tracks 133 production payload files across 15 skills, .gitattributes and testing suites. Hashes and sizes are computed directly from Git staged blob bytes (LF normalized). Manifest self-hash is stored externally in full_baseline_manifest_v6.sha256.",
+  "skills_included_count": 15,
+  "skills_included": [
+    "ai-quote-card-maker",
+    "competitor-deconstruct",
+    "copywriting-library",
+    "copywriting-verify-optimize",
+    "cover-visual-prompt",
+    "dbs-standard-answer",
+    "mimeng-style-skill",
+    "mono-color",
+    "native-subtitle-quote-image",
+    "publish-precheck",
+    "smart-comment-booster",
+    "srt-whiteboard-animation",
+    "tts-voiceover",
+    "viral-title-ab-tester",
+    "xf-router"
+  ],
+  "external_dependencies_not_bundled": [
+    "weread-skills"
+  ],
+  "categories_included": [
+    "Cat1_Production_Code_And_Spec",
+    "Cat2_Licenses_And_Upstream",
+    "Cat3_Tests_And_Evidence"
+  ],
+  "categories_excluded": [
+    "weread-skills (9 files, external dependency)",
+    "xf-router/knowledge/atoms.jsonl (1047 KB, third-party corpus atoms)",
+    "copywriting-library/references/benchmark-mimeng/ (8 files, sample excerpts)",
+    "copywriting-library/topics/ (39 files, sample topic texts)",
+    "srt-whiteboard-animation/assets/library/ (10 annotation files + media)",
+    "*.env, feishu_sync_record.json, temporary build files",
+    "*.png, *.jpg, *.gif, *.mp4 media and drawings"
+  ],
+  "total_production_files_tracked": 133,
+  "total_bytes_tracked": 1163794,
+  "max_file": {
+    "relative_path": "mimeng-style-skill/references/sentence_length_per_doc.csv",
+    "size_bytes": 346022,
+    "sha256": "e378cc0ca7439a471cf058685c854dbb8c043bdd28124fcb6ad736f7b14f1a5c"
+  },
+  "files": [
+    {
+      "relative_path": ".gitattributes",
+      "size_bytes": 273,
+      "sha256": "db63db1a58ab8aaf3d4afa18d84825710ce114761ade3594f9043839dac5c778"
+    },
+    {
+      "relative_path": ".gitignore",
+      "size_bytes": 945,
+      "sha256": "9560b4a4da79f576e73514a71c07a65ea236dcde9fa6dc8a7dc4580e3c9c8673"
+    },
+    {
+      "relative_path": "EXTERNAL_REFERENCES.md",
+      "size_bytes": 2576,
+      "sha256": "7af97d4268204dd8b103b1d924a454081215671440cd5b0fe061288f6e7378b6"
+    },
+    {
+      "relative_path": "LICENSE",
+      "size_bytes": 1066,
+      "sha256": "25e88bf80efe15eed4da79ba89a71ad360c2b70167d374a33f0a4a015f273e4c"
+    },
+    {
+      "relative_path": "README.md",
+      "size_bytes": 6222,
+      "sha256": "59c946e1c39edd49e8b472b193aa4b0a04b0c071940f69a1d4431706b60f9e27"
+    },
+    {
+      "relative_path": "ai-quote-card-maker/SKILL.md",
+      "size_bytes": 2571,
+      "sha256": "8185d922b45880caffeb35ee6a5106c6ec5eca825d7efc52bd7ccfe7a6381385"
+    },
+    {
+      "relative_path": "ai-quote-card-maker/requirements.txt",
+      "size_bytes": 14,
+      "sha256": "cb0f36e777fc4b925eb1261696e2b312d597f76e69c350590294f66dc83b4311"
+    },
+    {
+      "relative_path": "ai-quote-card-maker/scripts/render_quote_card.py",
+      "size_bytes": 9052,
+      "sha256": "acc99aefbc6c1c09c67f45a0085d018bb04d5a6bace51612fbd793d190994f29"
+    },
+    {
+      "relative_path": "ai-quote-card-maker/scripts/render_story_card.py",
+      "size_bytes": 7403,
+      "sha256": "9cbd429e3a7d4dc808d9467e821eee66c1627277cb8e8f3c567c19fb629b9802"
+    },
+    {
+      "relative_path": "competitor-deconstruct/SKILL.md",
+      "size_bytes": 1191,
+      "sha256": "5ad482ae23ae5dbad76337aa1c5e6020e2cc4f0905f42701798c0371c3cfe84c"
+    },
+    {
+      "relative_path": "competitor-deconstruct/scripts/deconstruct_hook.py",
+      "size_bytes": 7052,
+      "sha256": "16504308ba205f131287bcfb99ea0314b8741e8a5284ea4bd0afe522f0a7eac2"
+    },
+    {
+      "relative_path": "copywriting-library/README.md",
+      "size_bytes": 3957,
+      "sha256": "01382e9f2f84bfe129015a6223887d20f867c1cee52856ea34937dcc0200f25b"
+    },
+    {
+      "relative_path": "copywriting-library/SKILL.md",
+      "size_bytes": 3308,
+      "sha256": "c87593f2b15076b0f111ea07fce2cd3edf52b0b9d562891b4366b20292116e8a"
+    },
+    {
+      "relative_path": "copywriting-library/frameworks/character_visual_style.md",
+      "size_bytes": 3223,
+      "sha256": "fa17b2e4b639f1650916098661a29a1b5e3463fe6e09d02a7a3357e8893cc8f9"
+    },
+    {
+      "relative_path": "copywriting-library/frameworks/corpus_writing_dna.md",
+      "size_bytes": 2010,
+      "sha256": "6bfa7595278b622f1c70c6b787d32c0bdd262887ff700ab1435569d1c268f8af"
+    },
+    {
+      "relative_path": "copywriting-library/frameworks/dual_track_protocol.md",
+      "size_bytes": 3511,
+      "sha256": "69aea03ad75cd05fad4a355c26138a5babcf2d83952ea8e1d13788a28cb91259"
+    },
+    {
+      "relative_path": "copywriting-library/frameworks/five_stage_model.md",
+      "size_bytes": 2940,
+      "sha256": "86a1fece407dcc13b238e9df0013fd3af7dbb8a3b36620b1975c12586f451b16"
+    },
+    {
+      "relative_path": "copywriting-library/frameworks/four_tier_conversion.md",
+      "size_bytes": 6432,
+      "sha256": "79c9d2619db7d63b6ab2b3f63ac720d12ef356ee2f99c26a69cebe766e2f5b86"
+    },
+    {
+      "relative_path": "copywriting-library/frameworks/visual_action_storyboard.md",
+      "size_bytes": 3519,
+      "sha256": "44f531aa33d3494daf92cad3ad3e0cfc865e84e56a11efb415ee67c1de65327b"
+    },
+    {
+      "relative_path": "copywriting-library/frameworks/weread_reader_insights.md",
+      "size_bytes": 1822,
+      "sha256": "594eee5d8cde8fe08926a3e8212d9aa88be847740bc3c2d76bbd18fada62008f"
+    },
+    {
+      "relative_path": "copywriting-library/hooks/fear_awakening.md",
+      "size_bytes": 2842,
+      "sha256": "007ca1af5f6f654f904c824b3b931e08e3b26e234257966d4f6c5158bb001575"
+    },
+    {
+      "relative_path": "copywriting-library/references/feishu_weread_setup.md",
+      "size_bytes": 1126,
+      "sha256": "df5a914767acdad8de32646582c22fbc67f654f5bfbe59537a27fc1a2c177754"
+    },
+    {
+      "relative_path": "copywriting-library/references/knowledge_brain.md",
+      "size_bytes": 2194,
+      "sha256": "f2f0b89017fc4ab01cacdff5f8fcc1222c0050e04fbac0bcac60bfb6e0502871"
+    },
+    {
+      "relative_path": "copywriting-library/scripts/lark_base_sync.py",
+      "size_bytes": 3618,
+      "sha256": "40382717b8bd031a67c621f52caf52b8bb79b38a9baba70fb2ae5f9ac98a6868"
+    },
+    {
+      "relative_path": "copywriting-library/scripts/weread_fetcher.py",
+      "size_bytes": 13939,
+      "sha256": "52f7e1d3255312c0afb2819bac4a9d7e7abe3b9757c2b55789a8b61e65560c79"
+    },
+    {
+      "relative_path": "copywriting-verify-optimize/SKILL.md",
+      "size_bytes": 6406,
+      "sha256": "612df37f714b4572312ce70224f663ffce61d685ee15f4f7ff347c44555a7e63"
+    },
+    {
+      "relative_path": "copywriting-verify-optimize/agents/openai.yaml",
+      "size_bytes": 391,
+      "sha256": "ff864c5b2d369b064be447a42138ea7e39a86dfb8f3b2cf6c085fd4dac718863"
+    },
+    {
+      "relative_path": "copywriting-verify-optimize/references/output-template.md",
+      "size_bytes": 2571,
+      "sha256": "564c1809f74d425b58d76b775e355d3554d4a34ad17dc923f659aeaff965bb43"
+    },
+    {
+      "relative_path": "copywriting-verify-optimize/references/rubric.md",
+      "size_bytes": 4017,
+      "sha256": "93b8db508e892a52e4375a71eff62206126ae326e399117d7923a4c15c6e2902"
+    },
+    {
+      "relative_path": "copywriting-verify-optimize/references/verification.md",
+      "size_bytes": 2947,
+      "sha256": "363824b19dced402daef9a812b41f958fa0168b28297507edb323db9ced90d5b"
+    },
+    {
+      "relative_path": "cover-visual-prompt/SKILL.md",
+      "size_bytes": 1650,
+      "sha256": "52d81e1d4d7eb922f390717d77d8594e5ecd2b29b46849d24c6c2c8e027b07ab"
+    },
+    {
+      "relative_path": "cover-visual-prompt/scripts/generate_cover_prompts.py",
+      "size_bytes": 9392,
+      "sha256": "ab5b7953ba72f5ce01b22d3830383d5ce87b5a460eb614235b8c1ae62c53722d"
+    },
+    {
+      "relative_path": "dbs-standard-answer/NOTICE.md",
+      "size_bytes": 696,
+      "sha256": "00d881597b3c1bd035e186f39f5f1c964a79271f9274b668aa3a9ef4e8a8f103"
+    },
+    {
+      "relative_path": "dbs-standard-answer/SKILL.md",
+      "size_bytes": 3487,
+      "sha256": "d4868a083fadc126d8adc20d6db04761fa4a18b5cda2d4ccc3994ce913fe8b2f"
+    },
+    {
+      "relative_path": "dbs-standard-answer/scripts/isomorphism_engine.py",
+      "size_bytes": 22429,
+      "sha256": "2d5f9cb7bb74a1591410fd9a991acde8c21cc43b7e9e75b209667a430b413e57"
+    },
+    {
+      "relative_path": "mimeng-style-skill/SKILL.md",
+      "size_bytes": 4034,
+      "sha256": "72345138977492b988bcdf9e7fda97c3bd4272b755a937aff03cd993849f2b45"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/01_选题方法论.md",
+      "size_bytes": 19012,
+      "sha256": "32fa708a8e52ec7dd68084272dbb92b146ca069f89010c7f7952dd38a26039cf"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/02_标题方法论.md",
+      "size_bytes": 14059,
+      "sha256": "b531fb2eac5682ba602c821c5aab52644a12cd2a78df749282faf0c9e66186e1"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/03_主题观点方法论.md",
+      "size_bytes": 9029,
+      "sha256": "ed6bac97b15804ec9862459ab6fa0a3f53f38cde090d7a054c39fa59bd3806cd"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/04_素材方法论.md",
+      "size_bytes": 4617,
+      "sha256": "9984443125d215412c8e76aad32b1f1652c63c8b22e868c5c200836454242e9b"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/05_写作框架方法论.md",
+      "size_bytes": 5210,
+      "sha256": "1ac4427606801c0049e3bf58c00f3b5c81b9f370bdf2264158867233cc8dab11"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/06_写作风格方法论.md",
+      "size_bytes": 3927,
+      "sha256": "a73646f5a739cf5419a56988d2d62b0f988ca781de5a89f9c610e41eb8515d40"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/07_金句方法论.md",
+      "size_bytes": 15881,
+      "sha256": "61b22e9d9f9a897257280c58c7a5a94536ccffd5738adcbc9ceeca0721551258"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/08_故事结构方法论.md",
+      "size_bytes": 11920,
+      "sha256": "105cc9d95dff6be2f322b5dd310ab80345f5ae72d39aa44928667b38fcc59954"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/sentence_length_per_doc.csv",
+      "size_bytes": 346022,
+      "sha256": "e378cc0ca7439a471cf058685c854dbb8c043bdd28124fcb6ad736f7b14f1a5c"
+    },
+    {
+      "relative_path": "mimeng-style-skill/references/sentence_length_stats.json",
+      "size_bytes": 452,
+      "sha256": "4d2a43b53b2a3b1cf568b07938924edfbe5bc881b7269e73b6a46ba8512a6bc7"
+    },
+    {
+      "relative_path": "mimeng-style-skill/scripts/build_fts_index.py",
+      "size_bytes": 8007,
+      "sha256": "e128aa4bd3d8adc9b1b74a6cdd0417f6a6e640f322afd0e65e4be3bf1f4f8a4f"
+    },
+    {
+      "relative_path": "mimeng-style-skill/scripts/calc_sentence_length.py",
+      "size_bytes": 8976,
+      "sha256": "31b2c3bd7e7dc9c0a6554bc43852c0113efc5ec89a169ab1e625bd23e880c9ae"
+    },
+    {
+      "relative_path": "mimeng-style-skill/scripts/inspect_case.py",
+      "size_bytes": 3645,
+      "sha256": "d03b863295997ebd8b0f7b3ad6f3ff43a119c4fead88c78572dd7ad955cd57f2"
+    },
+    {
+      "relative_path": "mimeng-style-skill/scripts/search_full_text.py",
+      "size_bytes": 2932,
+      "sha256": "f5a6c6bd7ec25f1f18e57647ebe57207b51b55e78386267ed23a0d173d537134"
+    },
+    {
+      "relative_path": "mimeng-style-skill/scripts/search_library.py",
+      "size_bytes": 1947,
+      "sha256": "35d84dba1d77752b58f9a489f21ba730e29c6ad6eb2b53907ff0db6fe6951985"
+    },
+    {
+      "relative_path": "mono-color/ASSET-LICENSE.md",
+      "size_bytes": 605,
+      "sha256": "70eb1637a6d04652c494f8e20bdf82b6a675e9bbbc34b6bbf4b6f503cae9eea4"
+    },
+    {
+      "relative_path": "mono-color/LICENSE",
+      "size_bytes": 1064,
+      "sha256": "2025880f6441e121c76c01bc5996e84a7498d9d5aa7222a10400d303bdd043cb"
+    },
+    {
+      "relative_path": "mono-color/SKILL.md",
+      "size_bytes": 34280,
+      "sha256": "8274bc1f30a92a9dc715c03c3fb9aeaa060fb5a12fd58dfe8d977ae98a26bd76"
+    },
+    {
+      "relative_path": "mono-color/UPSTREAM.json",
+      "size_bytes": 1657,
+      "sha256": "d75bdfd82a419206e7cec00ec0f775559b1f2dcaf78636ab1bbb4bd46d5e3adf"
+    },
+    {
+      "relative_path": "mono-color/design-system/BOARD-DIRECTION.md",
+      "size_bytes": 1286,
+      "sha256": "1968ccd047c1d0b4b877f4f03ca6b9a67853cea7582cab34ee4e366d77566466"
+    },
+    {
+      "relative_path": "mono-color/design-system/carriers.json",
+      "size_bytes": 1620,
+      "sha256": "d08b5764a00ba4f00577061531f4f500f42e43c62008ff1150156565155c5282"
+    },
+    {
+      "relative_path": "mono-color/design-system/colors.json",
+      "size_bytes": 4341,
+      "sha256": "e299d6b4a2ec36e2e59b7095b85bae5f13609f505d21c9a83561088f7c446b48"
+    },
+    {
+      "relative_path": "mono-color/design-system/compositions.json",
+      "size_bytes": 2379,
+      "sha256": "e0c032e96eb14f53699614c8b4ecd35af1e145f5ffb8fe53b9214d1eb6032f30"
+    },
+    {
+      "relative_path": "mono-color/design-system/imperfections.json",
+      "size_bytes": 1566,
+      "sha256": "e281a1c7fb183af973179a7588df5745527a231462681797850227e791372715"
+    },
+    {
+      "relative_path": "mono-color/design-system/rhythm.json",
+      "size_bytes": 2800,
+      "sha256": "02c8c4ca0bba218feeca7311b35b61362972bded129f050b288a384d61c0c920"
+    },
+    {
+      "relative_path": "mono-color/design-system/typography.json",
+      "size_bytes": 4240,
+      "sha256": "b20f558444aab2c93b6339b76aa3178ae9e04e25eed1059cd2db8044733db26f"
+    },
+    {
+      "relative_path": "mono-color/evals/evals.json",
+      "size_bytes": 13770,
+      "sha256": "8e1c1dbd6c475aedf9ba58c74c4f67990b11649313b075e44eda6123f9236596"
+    },
+    {
+      "relative_path": "mono-color/evals/schema.json",
+      "size_bytes": 2982,
+      "sha256": "f3c7ed82148c78d1f49717e8eb237c60e97c2f8d517620fd31f278b1136ce7c0"
+    },
+    {
+      "relative_path": "mono-color/scripts/build_design_system_board.py",
+      "size_bytes": 14708,
+      "sha256": "08e834a25444b315295bf15c0de8559a384cb6bf560a8069f0a8f6e9f0bccbb6"
+    },
+    {
+      "relative_path": "mono-color/scripts/build_vibe_coding_poster.py",
+      "size_bytes": 5360,
+      "sha256": "c7b8b0f35da8ab1fc97c67f18aaa12e9101a8557f4d2c08b923f43b22275de49"
+    },
+    {
+      "relative_path": "mono-color/scripts/generate_mono_recipe.py",
+      "size_bytes": 10202,
+      "sha256": "f54eb6b1a136590c23641df7ee77e3fcfaaa08af9e18725647f0ef2640567aaa"
+    },
+    {
+      "relative_path": "mono-color/scripts/test_mono_color_offline.py",
+      "size_bytes": 8761,
+      "sha256": "4ea74fb297bee60335b8e63553851034be8c419e0c153ef0695ddfece52f27df"
+    },
+    {
+      "relative_path": "mono-color/scripts/validate_design_system.py",
+      "size_bytes": 8887,
+      "sha256": "9fc2d76faeadb0b74ff0c796ce57900b04479c47b062ff2662cd15b910f37793"
+    },
+    {
+      "relative_path": "mono-color/scripts/validate_evals.py",
+      "size_bytes": 4337,
+      "sha256": "d87778e0c8ede4ac42a7480d192005acb426ac825b2d69f9773e32c1ff604b86"
+    },
+    {
+      "relative_path": "native-subtitle-quote-image/SKILL.md",
+      "size_bytes": 3628,
+      "sha256": "63824dfd73c7dea3cbd7a80aa743f96e53ab2cc90e7453de85c4d71dbf08c574"
+    },
+    {
+      "relative_path": "native-subtitle-quote-image/agents/openai.yaml",
+      "size_bytes": 261,
+      "sha256": "f4a66ebaf5a83db15ec30b5d268f93db6fdb4b9ef590e91446311c3f1f6159f2"
+    },
+    {
+      "relative_path": "native-subtitle-quote-image/requirements.txt",
+      "size_bytes": 33,
+      "sha256": "3f5a73fbf5b2690a1fc153b9a15f9d052b6a8aa388fe40d4c55f8696f77430bb"
+    },
+    {
+      "relative_path": "native-subtitle-quote-image/scripts/native_subtitle_stitch.py",
+      "size_bytes": 8034,
+      "sha256": "26a7befd6814551af11beb652f5788152d9bf98cc7d3b4885f15c87e4426d7fd"
+    },
+    {
+      "relative_path": "publish-precheck/.github/workflows/ci.yml",
+      "size_bytes": 427,
+      "sha256": "f56fbd4ce9b575520b76451c9e328443433112de5a35d920e15c747e433831ec"
+    },
+    {
+      "relative_path": "publish-precheck/.gitignore",
+      "size_bytes": 598,
+      "sha256": "04dd5b3f2f61dc0e47d4860493544cc94b0b0bca4bc706b499c40a07e9b54c24"
+    },
+    {
+      "relative_path": "publish-precheck/CHANGELOG.md",
+      "size_bytes": 3568,
+      "sha256": "7fa0107c321c4ee164b0aa403f1fbb1e104a4d046c82787917b91375eb67f27d"
+    },
+    {
+      "relative_path": "publish-precheck/CONTRIBUTING.md",
+      "size_bytes": 2036,
+      "sha256": "3a3af60589308242e87aa040a1ae81a3baa33bd354030b0acdeb0e3c2684f4e5"
+    },
+    {
+      "relative_path": "publish-precheck/LICENSE",
+      "size_bytes": 1067,
+      "sha256": "d54f420dec599ca256059f45a554703fcc739894fc09c3c64526657f33c95c09"
+    },
+    {
+      "relative_path": "publish-precheck/MAINTAINING.md",
+      "size_bytes": 3998,
+      "sha256": "7218e783494ad71744a68f4fb0bf2b446de3aac05a716ed2e275f0f9dd3759df"
+    },
+    {
+      "relative_path": "publish-precheck/README.md",
+      "size_bytes": 8832,
+      "sha256": "514c68d8b5ec4bd1349af96c57634c7d1b8b414ead20b0d160b624ef4c418eaf"
+    },
+    {
+      "relative_path": "publish-precheck/ROADMAP.md",
+      "size_bytes": 1955,
+      "sha256": "c363018eec3f240c427ca6f7d775245fe155300cbd29b25819402e804f30b35d"
+    },
+    {
+      "relative_path": "publish-precheck/SECURITY.md",
+      "size_bytes": 1527,
+      "sha256": "9cb3ad65c71b49590f729deabce1afd9415168dc02460eb55fe6e85e7703ab5d"
+    },
+    {
+      "relative_path": "publish-precheck/SKILL.md",
+      "size_bytes": 15623,
+      "sha256": "b0a559b43b6fd3f47e9780bee6f69450544ead9856dbe8493add79a234550666"
+    },
+    {
+      "relative_path": "publish-precheck/THIRD_PARTY_NOTICES.md",
+      "size_bytes": 646,
+      "sha256": "fdf5d1cbb462b426b29da517641732c7751fbd133c21b2b7e10c52f6b78b3f52"
+    },
+    {
+      "relative_path": "publish-precheck/data/README.md",
+      "size_bytes": 1318,
+      "sha256": "451b2c4e8f0f223fa2a4dfdad0e4d66fcc0ae649215b16bca40c0c5b424a7280"
+    },
+    {
+      "relative_path": "publish-precheck/data/cases/README.md",
+      "size_bytes": 805,
+      "sha256": "33811d12ca0718a9bf2ad601577cd65226b2c5ef14ad30c97f082c838ee26908"
+    },
+    {
+      "relative_path": "publish-precheck/data/history/README.md",
+      "size_bytes": 322,
+      "sha256": "61aab89244dfb3fa5a0b3117a845677c8760b0f9829569ac0c9807545468853e"
+    },
+    {
+      "relative_path": "publish-precheck/data/wordlists/README.md",
+      "size_bytes": 347,
+      "sha256": "8ae9868af8ef76c1dd6b824f8362c78303075ec8ee7f544cdb51054d6554689f"
+    },
+    {
+      "relative_path": "publish-precheck/evals/test_scan.py",
+      "size_bytes": 8400,
+      "sha256": "48090c804aea3cff1bfa48f115972b7ab75178ba341e5e0bac9261aa8b758841"
+    },
+    {
+      "relative_path": "publish-precheck/evals/trigger_cases.jsonl",
+      "size_bytes": 864,
+      "sha256": "425223fe073e3f94eada93179ca4b4ebcd5f026c1dcd0404fc5b088fd9607b5e"
+    },
+    {
+      "relative_path": "publish-precheck/references/diagnose.md",
+      "size_bytes": 3031,
+      "sha256": "20db723073a9e9d49b23b5a92da9b6ac60cf85eb414b4cc8841dec21188124de"
+    },
+    {
+      "relative_path": "publish-precheck/references/industry-finance.md",
+      "size_bytes": 9843,
+      "sha256": "8391fef1bbc7d3bf82b1761ecf3f13ccdeec63245a60461434163c61db5beafe"
+    },
+    {
+      "relative_path": "publish-precheck/references/industry-medical.md",
+      "size_bytes": 12321,
+      "sha256": "362ad526e5c357dffdfc97ea749d09ce632c2cbbbbfaeffa97dc46b09acbbad4"
+    },
+    {
+      "relative_path": "publish-precheck/references/judgment.md",
+      "size_bytes": 5322,
+      "sha256": "1577ce05d67f9216d125f084b6f807eb009771431b658a9b9703960814dda8b8"
+    },
+    {
+      "relative_path": "publish-precheck/references/platform-douyin.md",
+      "size_bytes": 3131,
+      "sha256": "fcd6fc82387e56a5ac8bd8f612832d19971ae3d96428defe244f5dd159a125a0"
+    },
+    {
+      "relative_path": "publish-precheck/references/platform-shipinhao.md",
+      "size_bytes": 1876,
+      "sha256": "fa12ed7135cb4283f1fc9ebd7c0e05832bb765495c4e73d7d3895ff0cbdf0e32"
+    },
+    {
+      "relative_path": "publish-precheck/references/platform-xiaohongshu.md",
+      "size_bytes": 1977,
+      "sha256": "d74bbd93772c37e673f7779888032b748391105ccff0d8ae14e531722efe1168"
+    },
+    {
+      "relative_path": "publish-precheck/references/repair.md",
+      "size_bytes": 5193,
+      "sha256": "28e92ba203451177e21cc303d6e8f5b343e0a75c340b9ffbaa5831bb6b381a43"
+    },
+    {
+      "relative_path": "publish-precheck/references/rules-commercial.md",
+      "size_bytes": 16561,
+      "sha256": "a82c23ec79c8ab08c2114352f79bda1a9e55d4b69e3e71bbf4db72a44aa241fd"
+    },
+    {
+      "relative_path": "publish-precheck/references/rules-common.md",
+      "size_bytes": 25840,
+      "sha256": "5f7543b988cb1729cc44e2a73900a5d4dd8a5b86295225df01d88205cdd1e457"
+    },
+    {
+      "relative_path": "publish-precheck/scripts/scan.py",
+      "size_bytes": 11969,
+      "sha256": "9db51d6e8c2ca20134d347ff16fdf9a324a7353dfb3fc78db77e900597e932f2"
+    },
+    {
+      "relative_path": "publish-precheck/scripts/terms.json",
+      "size_bytes": 16021,
+      "sha256": "2668ef963b5da4082319b8f59efd1c52f01de610dc4b056b590c86d7296f39ad"
+    },
+    {
+      "relative_path": "publish-precheck/templates/expressions.md",
+      "size_bytes": 2266,
+      "sha256": "88a03a900172a4298e3e18b50c50e713aabcd2c73f96280110ccd4124bbc3760"
+    },
+    {
+      "relative_path": "publish-precheck/templates/my-rules.md",
+      "size_bytes": 1117,
+      "sha256": "e618a3e9469b90559743c73d2ff5040b55abae57de57ae99d3f378dd1ba1fd5d"
+    },
+    {
+      "relative_path": "publish-precheck/templates/profile.md",
+      "size_bytes": 647,
+      "sha256": "567c391b44b5632fd6abb64f8ba2336aa7d6aa63d398bfe359ba622df79f7fc8"
+    },
+    {
+      "relative_path": "publish-precheck/templates/词库示例.md",
+      "size_bytes": 496,
+      "sha256": "a56cac00e050e39fd1ad2f99a84e73857290d26d0d06e9a911b07e71fb62e8a8"
+    },
+    {
+      "relative_path": "smart-comment-booster/SKILL.md",
+      "size_bytes": 1725,
+      "sha256": "a0c41d89364223528c6919d66c3735edbf9cd58359b71861119cd29c4ed480ec"
+    },
+    {
+      "relative_path": "smart-comment-booster/scripts/generate_comments.py",
+      "size_bytes": 5713,
+      "sha256": "e4384f2ab7bf5579ad1c7215784fdb1276959a502d559fdccb22ffe48ebbc70c"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/.gitignore",
+      "size_bytes": 211,
+      "sha256": "50b25fe606ac8d5b1023abe47d4f2a16dafc25c1a801dae87e6e16a7e874dc59"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/LICENSE",
+      "size_bytes": 1075,
+      "sha256": "e3b216f44f5956d7a3e10d6793b4105efdbb24d7b8e1c4277cbfeb90c2854585"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/README.md",
+      "size_bytes": 6376,
+      "sha256": "40e76f8cf16efd4e6db032053f932fe5923a5af02bcff6df9732627f0197526b"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/SKILL.md",
+      "size_bytes": 18859,
+      "sha256": "ba4ff1f8734df40eeaf49c1d0dcb05fcee21c73b632a4ee58c4b5c9a5dcbd769"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/agents/openai.yaml",
+      "size_bytes": 245,
+      "sha256": "20cae49636ade7d4d815eb1fbc3c41e604cbb00497844d3c66b6def7c0054670"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/examples/scene-01-monkey-mountain-banana.annotation.json",
+      "size_bytes": 1819,
+      "sha256": "104863b07848f8a22494ff8cb27db722991439f168633ba73c80b83032ca48db"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/scripts/merge_scenes.py",
+      "size_bytes": 4257,
+      "sha256": "db0adb1775edfeadfd7d9afeb49ee81184c804010a3672195b98741170517237"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/scripts/parse_srt.py",
+      "size_bytes": 5009,
+      "sha256": "723999ee7e5e6c045d5bf43baff810bdfb41262bc7dcef6ac03a3b2b3c308a40"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/scripts/prepare_env.py",
+      "size_bytes": 3011,
+      "sha256": "e9758c25bfb477f86ade20f1dc44ce0e670cbcc7511fc5e406a1ae4f029ac29d"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/scripts/render_annotation_preview.py",
+      "size_bytes": 3038,
+      "sha256": "2b4b8fa85bb7648249a33f3ccaebb7be0df2f8eeadabe4fd58c567fbe97ab594"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/scripts/render_stream_whiteboard.py",
+      "size_bytes": 27599,
+      "sha256": "a94390aee9b322ac2ce407d9332a3cb6f3e70d00586444b45ea378872d8fc9b5"
+    },
+    {
+      "relative_path": "srt-whiteboard-animation/scripts/stream_render.py",
+      "size_bytes": 77230,
+      "sha256": "6544d58593642eb9e7056170212dc22ed88b652f5fb7666830b58c8114c5fad0"
+    },
+    {
+      "relative_path": "tests/test_new_skills_offline.py",
+      "size_bytes": 17521,
+      "sha256": "8ee00f7f41032f00e0b0acd3aa770a2db0d8c97d9e5398b325ddba361ba0d0e0"
+    },
+    {
+      "relative_path": "tts-voiceover/.env.example",
+      "size_bytes": 195,
+      "sha256": "95e8a688eb8f55ffd29f283e0be32f6f1a3afe0ecb0390001ca759127938ba0c"
+    },
+    {
+      "relative_path": "tts-voiceover/SKILL.md",
+      "size_bytes": 5156,
+      "sha256": "c66a24e2505fc97b688fe70c85f143accd689bf7ba99d3683b315d88d1544a4b"
+    },
+    {
+      "relative_path": "tts-voiceover/scripts/compose_final.py",
+      "size_bytes": 7549,
+      "sha256": "14468f69d16ca487d8294af53f9cb283b811e60b1e43ebc8f4f54817beb61c5c"
+    },
+    {
+      "relative_path": "tts-voiceover/scripts/export_pack.py",
+      "size_bytes": 15499,
+      "sha256": "d191e2b0fe3190120a75c753c49fe31a2b1cc2c035c05ac4425b659435e2a7c0"
+    },
+    {
+      "relative_path": "tts-voiceover/scripts/srt_to_voice.py",
+      "size_bytes": 14747,
+      "sha256": "beba18b41bcbae65d29740356e2246783faee0429fa12f21297025ff04b8cf8e"
+    },
+    {
+      "relative_path": "tts-voiceover/scripts/tts_volcano.py",
+      "size_bytes": 9989,
+      "sha256": "1b7a08efe6a11ba7764c42f3af684b3cbada2d25f7ac1fdcb0f0cfc3f91faa7e"
+    },
+    {
+      "relative_path": "viral-title-ab-tester/SKILL.md",
+      "size_bytes": 2133,
+      "sha256": "416c134bc0b61bbe14781a2908bc7139227899eb849aeea60e2c9cd60fdeccfd"
+    },
+    {
+      "relative_path": "viral-title-ab-tester/scripts/evaluate_titles.py",
+      "size_bytes": 7307,
+      "sha256": "3d97c3e860b81cceef0dc7742c1ebc15c63174398a72c454d551a2c03ce1e7b5"
+    },
+    {
+      "relative_path": "xf-router/SKILL.md",
+      "size_bytes": 5335,
+      "sha256": "d580e1591a10e714e93a94db9ac5cc8c5205d23892969f120e82bb490995cbc0"
+    },
+    {
+      "relative_path": "xf-router/knowledge/atoms.sample.jsonl",
+      "size_bytes": 567,
+      "sha256": "ec30d7cc460496a91398a769979f5c09b218069dc5160b94633e1c703951cee6"
+    },
+    {
+      "relative_path": "xf-router/scripts/xf_triage.py",
+      "size_bytes": 8422,
+      "sha256": "de6ca35c979cbd39557cd45c2ed5538715c7929b052e1020d99790131c7c38d9"
+    }
+  ]
+}

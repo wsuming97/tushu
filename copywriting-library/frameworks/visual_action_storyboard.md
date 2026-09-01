@@ -1,6 +1,6 @@
 # 🎨 视觉动词分镜与画面切换法则 (Visual Action Storyboard Standard)
 
-> 本规范提炼自头部爆款短视频分镜设计体系与 50+ 中老年实战复盘心法。  
+> 本规范提炼自头部爆款短视频分镜设计体系与 50+ 中老年实战复盘心法。
 > 核心原则：**拒绝假大空的抽象词（如“成长/治愈/内耗”），分镜必须基于可被画手落墨的“具体生活动作”与“生活毛刺道具”！**
 
 ---
@@ -37,7 +37,7 @@
 每次生成分镜提示词时，严格遵循以下 4 段式结构：
 
 ```text
-Masterpiece hand-drawn whiteboard illustration on warm cream rice yellow paper background #F5EBD7, clean precise black ink line art with soft minimalist watercolor wash, vertical 9:16 composition. 
+Masterpiece hand-drawn whiteboard illustration on warm cream rice yellow paper background #F5EBD7, clean precise black ink line art with soft minimalist watercolor wash, vertical 9:16 composition.
 Foreground: [具体道具与近景细节，如：木桌上的老花镜、深度体检报告单与新鲜水果]
 Middleground: [具体中国老年主体与动作，如：老奶奶在阳光下认真划线查阅，面容慈祥安宁]
 Background: [三层景深环境，如：阳光明媚的书房与窗外绿树]，cinematic storytelling, no text, high quality.

@@ -1,0 +1,45 @@
+{
+  "repository_url": "https://github.com/yanliudesign/mono-color-skill",
+  "upstream_commit": "de607fedfff647eaf5400e0aa43085787d7d1fca",
+  "upstream_author": "yanliudesign",
+  "imported_at": "2026-09-01T13:50:00+08:00",
+  "upstream_included_files": [
+    "ASSET-LICENSE.md",
+    "LICENSE",
+    "SKILL.md",
+    "design-system/BOARD-DIRECTION.md",
+    "design-system/carriers.json",
+    "design-system/colors.json",
+    "design-system/compositions.json",
+    "design-system/imperfections.json",
+    "design-system/rhythm.json",
+    "design-system/typography.json",
+    "evals/evals.json",
+    "evals/schema.json",
+    "scripts/build_design_system_board.py",
+    "scripts/build_vibe_coding_poster.py",
+    "scripts/validate_evals.py"
+  ],
+  "local_added_files": [
+    "UPSTREAM.json",
+    "scripts/generate_mono_recipe.py",
+    "scripts/test_mono_color_offline.py"
+  ],
+  "local_modified_files": [
+    "scripts/validate_design_system.py"
+  ],
+  "excluded_upstream_paths": [
+    "examples/",
+    "swatches/",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    ".github/",
+    ".gitignore"
+  ],
+  "license_scope": {
+    "code_and_design_system": "MIT License (see LICENSE)",
+    "examples_and_visual_assets": "Excluded. Proprietary to original author (see ASSET-LICENSE.md). Not imported, not synchronized, and not used in commercial artifacts."
+  },
+  "asset_compliance_statement": "All visual artworks under upstream examples/ have been strictly excluded from synchronization. UPSTREAM.json is a locally added metadata file. Local scripts (generate_mono_recipe.py, test_mono_color_offline.py) are explicitly itemized to prevent opaque bundling."
+}

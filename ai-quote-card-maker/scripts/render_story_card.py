@@ -75,68 +75,68 @@ def render_single_story_card(
     """
     if not os.path.exists(bg_image_path):
         raise FileNotFoundError(f"背景图不存在: {bg_image_path}")
-        
+
     bg = Image.open(bg_image_path).convert("RGBA")
     bg_w, bg_h = bg.size
-    
+
     scale = max(target_width / bg_w, target_height / bg_h)
     new_w = int(bg_w * scale)
     new_h = int(bg_h * scale)
     bg_resized = bg.resize((new_w, new_h), Image.Resampling.LANCZOS)
-    
+
     left = (new_w - target_width) // 2
     top = (new_h - target_height) // 2
     canvas = bg_resized.crop((left, top, left + target_width, top + target_height))
-    
+
     # 整体叠加轻微柔光
     overlay = Image.new("RGBA", (target_width, target_height), (255, 255, 255, 20))
     canvas = Image.alpha_composite(canvas, overlay)
-    
+
     # 字体准备
     font_main_title = get_font("", int(target_width * 0.065), serif=True)
     font_body = get_font("", int(target_width * 0.032), serif=True)
-    
+
     # 解析故事内容
     story_lines = [l.strip() for l in story_body.strip().split("\n") if l.strip()]
     line_spacing = int(font_body.size * 1.85)
-    
+
     # 卡片边距与自适应高度
     card_margin_x = int(target_width * 0.07)
     card_w = target_width - card_margin_x * 2
-    
+
     # 动态计算内容高度，确保留白舒服
     content_height = int(font_main_title.size * 1.5) + len(story_lines) * line_spacing + 160
     card_h = max(int(target_height * 0.56), content_height)
     card_y1 = int(target_height * 0.12) # 偏上方布局，底部留出景深
     card_y2 = card_y1 + card_h
-    
+
     # 毛玻璃裁切与高斯模糊
     crop = canvas.crop((card_margin_x, card_y1, card_margin_x + card_w, card_y2))
     blur = crop.filter(ImageFilter.GaussianBlur(radius=26))
     tint = Image.new("RGBA", (card_w, card_h), (255, 255, 255, 205)) # 白底高通透质感
     card_composed = Image.alpha_composite(blur, tint)
-    
+
     # 圆角贴合
     mask = Image.new("L", (card_w, card_h), 0)
     d_m = ImageDraw.Draw(mask)
     d_m.rounded_rectangle([0, 0, card_w, card_h], radius=24, fill=255)
     canvas.paste(card_composed.convert("RGB"), (card_margin_x, card_y1), mask)
-    
+
     draw = ImageDraw.Draw(canvas)
     # 微光白边
     draw.rounded_rectangle([card_margin_x, card_y1, card_margin_x + card_w, card_y2], radius=24, outline=(255, 255, 255, 230), width=2)
-    
+
     # 绘制标题
     title_start_x = card_margin_x + int(card_w * 0.08)
     title_start_y = card_y1 + int(card_h * 0.10)
     draw.text((title_start_x, title_start_y), title, fill="#1F1F1F", font=font_main_title)
-    
+
     # 标题下方精致分割线与圆点
     line_y = title_start_y + int(font_main_title.size * 1.35)
     line_end_x = card_margin_x + card_w - int(card_w * 0.08)
     draw.line([(title_start_x, line_y), (line_end_x, line_y)], fill=(180, 180, 180, 150), width=1)
     draw.ellipse([title_start_x + 75, line_y - 3, title_start_x + 81, line_y + 3], fill=(150, 150, 150, 200))
-    
+
     # 绘制故事段落
     cur_body_y = line_y + int(card_h * 0.07)
     for line in story_lines:
@@ -175,7 +175,7 @@ def main():
     parser.add_argument("--story", required=True, help="故事正文（支持**高亮词**）")
     parser.add_argument("--out", default="", help="输出路径")
     args = parser.parse_args()
-    
+
     out_path = args.out if args.out else auto_output_path(args.title, "single_story")
     render_single_story_card(
         bg_image_path=args.bg,

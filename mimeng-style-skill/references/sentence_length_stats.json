@@ -1,0 +1,14 @@
+{
+  "dataset": "Phase B Full v2 (phase_b_956_fts.db)",
+  "doc_filter": "doc_status == 'available'",
+  "doc_count": 943,
+  "total_valid_sentences": 81483,
+  "mean_sentence_length": 25.63,
+  "median_sentence_length": 21.0,
+  "p25_length": 14.0,
+  "p75_length": 32.0,
+  "p90_length": 47.0,
+  "min_length": 2,
+  "max_length": 349,
+  "split_rules": "以 [。！？!?\\n]+ 作为断句边界，智能剥离标题元数据前缀，严格保留首行正文"
+}

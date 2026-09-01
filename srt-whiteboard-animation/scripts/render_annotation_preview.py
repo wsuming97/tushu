@@ -49,7 +49,7 @@ def main(image_path: str, annotation_path: str, output_path: str) -> None:
                 start, end = (x + 20, cy), (x + region["width"] - 20, cy)
             else:
                 start, end = (x + 20, cy), (x + region["width"] - 20, cy)
-                
+
         draw.line((start, end), fill=color, width=4)
         draw.polygon((end, (end[0] - 10, end[1] - 6), (end[0] - 10, end[1] + 6)), fill=color)
 

@@ -203,21 +203,31 @@ def run_audition(
 
     if engine == "volcano":
         from tts_volcano import VolcanoConfig, audition_voices
+        api_key = os.environ.get("VOLCANO_API_KEY", "")
+        app_id = os.environ.get("VOLCANO_APP_ID", "")
+        is_plan = api_key.startswith("ark-")
+        if not api_key:
+            print("❌ 错误: 未配置 VOLCANO_API_KEY")
+            print("   请在 .env 文件中填入火山引擎 API Key (例如 ark-xxx 或标准 Token)")
+            sys.exit(1)
+        if not is_plan and not app_id:
+            print("❌ 错误: 传统 v1 模式未配置 VOLCANO_APP_ID (若使用方舟 ark- Key 则无需 app_id)")
+            sys.exit(1)
+
         config = VolcanoConfig(
-            app_id=os.environ.get("VOLCANO_APP_ID", ""),
-            api_key=os.environ.get("VOLCANO_API_KEY", ""),
+            app_id=app_id,
+            api_key=api_key,
             cluster_id=os.environ.get("VOLCANO_CLUSTER_ID", "volcano_tts"),
             speed_ratio=speed,
         )
-        if not config.app_id or not config.api_key:
-            print("❌ 错误: 未配置 VOLCANO_APP_ID 或 VOLCANO_API_KEY")
-            print("   请在 .env 文件中填入火山引擎凭证")
-            sys.exit(1)
 
         audition_dir = output_dir / "audition"
         results = audition_voices(audition_text, config, audition_dir)
         print(f"\n✅ 试听片段已生成到: {audition_dir}")
         print(f"   共 {len(results)} 个音色，请逐个播放对比后选择")
+    elif engine == "minimax":
+        print("💡 MiniMax TTS 接口正在对接中，当前推荐使用 --engine volcano（火山豆包语音）。")
+        sys.exit(1)
     else:
         print(f"❌ 暂不支持引擎: {engine}")
         sys.exit(1)
@@ -238,16 +248,27 @@ def run_full(
 
     if engine == "volcano":
         from tts_volcano import VolcanoConfig, synthesize_to_file
+        api_key = os.environ.get("VOLCANO_API_KEY", "")
+        app_id = os.environ.get("VOLCANO_APP_ID", "")
+        is_plan = api_key.startswith("ark-")
+        if not api_key:
+            print("❌ 错误: 未配置 VOLCANO_API_KEY")
+            print("   请在 .env 文件中填入火山引擎 API Key (例如 ark-xxx 或标准 Token)")
+            sys.exit(1)
+        if not is_plan and not app_id:
+            print("❌ 错误: 传统 v1 模式未配置 VOLCANO_APP_ID (若使用方舟 ark- Key 则无需 app_id)")
+            sys.exit(1)
+
         config = VolcanoConfig(
-            app_id=os.environ.get("VOLCANO_APP_ID", ""),
-            api_key=os.environ.get("VOLCANO_API_KEY", ""),
+            app_id=app_id,
+            api_key=api_key,
             cluster_id=os.environ.get("VOLCANO_CLUSTER_ID", "volcano_tts"),
             voice_type=voice,
             speed_ratio=speed,
         )
-        if not config.app_id or not config.api_key:
-            print("❌ 错误: 未配置 VOLCANO_APP_ID 或 VOLCANO_API_KEY")
-            sys.exit(1)
+    elif engine == "minimax":
+        print("💡 MiniMax TTS 接口正在对接中，当前推荐使用 --engine volcano（火山豆包语音）。")
+        sys.exit(1)
     else:
         print(f"❌ 暂不支持引擎: {engine}")
         sys.exit(1)

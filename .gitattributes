@@ -1,0 +1,16 @@
+# Auto-detect text files and enforce LF line endings in repository
+* text=auto eol=lf
+
+# Explicit binary file types
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.mp4 binary
+*.webp binary
+*.svg binary
+*.ico binary
+*.pdf binary
+*.ttc binary
+*.ttf binary
+*.db binary

@@ -1,87 +1,76 @@
-# 🎨 AI 内容创作技能套件 (AI Content Creator Suite)
+# 🎨 AI 商业内容创作技能套件 (AI Content Creator Suite)
 
-> 面向 **微信视频号 / 快手 / 抖音 / 小红书 / 微信公众号** 的全流程 AI 视觉与音视频商业内容生产工作流工具包。  
-> 严格践行 **1.微信读书调研 ➔ 5.飞书看板建档 ➔ 4.合规风控预审 ➔ 3.6维质检打分 ➔ 2.终稿文案分镜 ➔ 6.视听声画出片** 标准商业流水线。
+> 面向 **微信视频号 / 抖音 / 小红书 / 快手 / 微信公众号** 的全流程 AI 视觉、文案与音视频商业内容生产工作流工具包。
+> 涵盖 **选题策划 ➔ 逆向拆解 ➔ 历史立论 ➔ 双轨写作 ➔ 质量风控 ➔ 视觉生图 ➔ 白板动画 ➔ 智能配音 ➔ 互动运营** 完整闭环。
 
 ---
 
-## 📦 核心技能矩阵 (Modules)
+## 📦 核心技能矩阵 (15 大打包生产技能)
 
 ```text
 .
-├── 📚 copywriting-library/          # 技能 1：文案素材库（双轨框架、视觉指南、分主题口播文案库、飞书同步）
+├── 🧭 xf-router/                     # 路由中枢：路线规划与 15 大技能意图分发路由器
+├── 📚 copywriting-library/          # 技能 1：文案素材库（双轨框架、视觉指南与读者洞察分析）
 ├── ✍️ copywriting-verify-optimize/   # 技能 2：商业文案 6 维质检评分、事实核验与转化优化
 ├── 🛡️ publish-precheck/             # 技能 3：国内自媒体发布前风控自审与保意违禁词修复
 ├── 🎴 ai-quote-card-maker/          # 技能 4：爆款金句卡片 & 贴图故事号全套生成
-├── 🎬 srt-whiteboard-animation/     # 技能 5：SRT 字幕驱动的 60fps 白板流式手绘动画引擎
-├── 🎙️ tts-voiceover/                # 技能 6：剪映/火山引擎 VIP 播客级磁性配音与声画合成 (0.95x 黄金速)
-└── 🎞️ native-subtitle-quote-image/  # 技能 7：原生字幕截帧与社交长图拼图工具
+├── 🎬 srt-whiteboard-animation/     # 技能 5：SRT 字幕驱动的白板流式连续笔迹手绘动画引擎
+├── 🎙️ tts-voiceover/                # 技能 6：播客级磁性配音与声画合成工具
+├── 🎞️ native-subtitle-quote-image/  # 技能 7：原生字幕截帧与社交长图拼图工具
+├── 🔍 competitor-deconstruct/       # 技能 8：同行文案字数机械分段与开篇句型槽位提取
+├── 📊 viral-title-ab-tester/        # 技能 9：爆款标题 10 维启发式评分与 A/B 选拔器
+├── 🎨 cover-visual-prompt/          # 技能 10：爆款封面动态主体与生图 Prompt 蒸馏器
+├── 🏛️ dbs-standard-answer/          # 技能 11：基于已核验事实的历史案例类比与学术立论建议器
+├── 💬 smart-comment-booster/        # 技能 12：作者置顶首评与官方答疑助手 (零水军/零虚构)
+├── 🖋️ mimeng-style-skill/           # 技能 13：新媒体观点文机制写作与句长统计分析引擎
+└── 🖨️ mono-color/                   # 技能 14：出版级单色/双色孔版印刷与 Risograph 视觉底图引擎
 ```
 
----
-
-## 🔄 标准生产流水线 (1.5.4.3.2.6 闭环)
-
-```mermaid
-graph TD
-    S1["1. 微信读书 6 维读者洞察 (weread_fetcher.py)<br/>• 采样 20~40 条真实长评，提取 pain/scene/belief"] --> S5["5. 飞书多维表格建档 (lark_base_sync.py)<br/>• 第一时间建档入看板，团队可视化追踪"]
-    S5 --> S4["4. 平台合规风控预审 (publish-precheck/scan.py)<br/>• 扫描广告法极值词/敏感词，自动保意修复"]
-    S4 --> S3["3. 6 维商业文案质检 (copywriting-verify-optimize)<br/>• 事实/共鸣/转化/留存/匹配/风控打分 (≥85分放行)"]
-    S3 --> S2["2. 定稿双轨文案与动作分镜 (four_tier_conversion & storyboard)<br/>• 深度带货款 12m + 爆款流量款 4m + 老渔吖同款四平台文案"]
-    S2 --> S6["6. 声画合成与白板手绘成片 (tts-voiceover & srt-whiteboard)<br/>• 剪映磁性男声 0.95x 黄金速 + 60fps 暖米黄底流式手绘成片"]
-```
+> **📌 外部可选依赖说明**：
+> `weread-skills`（微信读书助手网关规范）作为外部服务接入规范在此登记，需用户在本地自行配置 `WEREAD_API_KEY`，不计入本仓库打包技能源码中（详见 [EXTERNAL_REFERENCES.md](EXTERNAL_REFERENCES.md)）。
 
 ---
 
-## 🛠️ 模块详解 (Module Details)
+## 🛠️ 15 大模块核心能力概览
 
-### 1. 📚 [文案素材库与创作引擎 (`copywriting-library`)](./copywriting-library/)
-- **微信读书 6 维读者洞察**：采样 20~40 条读者真实书评，提炼真实困境(`pain`)、生活场景(`scene`)与认知觉醒(`belief`)。
-- **四层递进带货法**：严格按照 **共情 ➔ 亏欠 ➔ 痛点 ➔ 出口** 四层转化逻辑，注入生活毛刺细节，拒绝空洞排比句。
-- **飞书多维表格实时同步**：支持全自动双向同步看板，带货/流量双轨分离。
-
-### 2. ✍️ [文案审核与优化 (`copywriting-verify-optimize`)](./copywriting-verify-optimize/)
-- **6 维商业质检体系**：事实可信度(25分)、共鸣与懂感(20分)、转化与逻辑(20分)、留存与互动(15分)、产品匹配(10分)、风控合规(10分)。
-- 严格执行 ≥85 分放行门槛，杜绝虚假恐吓营销与编造家庭矛盾。
-
-### 3. 🛡️ [发布风控预审 (`publish-precheck`)](./publish-precheck/)
-- **多平台自审引擎**：覆盖微信视频号、抖音、快手、小红书最新违规限流规则。
-- **保意精准替换**：对医疗绝对化用语、夸大宣传词、违禁词进行智能降级与同义保意修复。
-
-### 4. 🎴 [AI 金句/故事卡片生成器 (`ai-quote-card-maker`)](./ai-quote-card-maker/)
-- **全屏意境金句卡片**：星空/落日/山川唯美背景 + 优雅毛玻璃排版 + 电影台词中英双语设计。
-- **贴图故事号矩阵**：单卡片故事贴图 + 深度公众号配套长文 TXT + 流量标签矩阵。
-
-### 5. 🎬 [SRT 白板手绘动画引擎 (`srt-whiteboard-animation`)](./srt-whiteboard-animation/)
-- **流式连续笔迹画法**：起笔墨线骨架追踪（`ink`） → 区域平涂上色（`color`），真实还原画手笔触。
-- **叙事遮罩编排**：按叙事语义依次逐区揭示，支持 `protectedRegions` 重叠保护与持久画布。
-- **可视化预览台**：内置 `preview.html` 本地 Web 预览台，支持拖拽标注框、时序微调与声画实时对齐。
-
-### 6. 🎙️ [TTS 播客级配音与成片合成 (`tts-voiceover`)](./tts-voiceover/)
-- **多引擎支持**：接入 **火山引擎（豆包语音）Seed-TTS 2.0 / Agent Plan**，全面支持剪映 VIP 官方同款【磁性男声】（`zh_male_m191_uranus_bigtts`）。
-- **微沉浸调优**：内置 **0.95x 黄金微沉浸语速** 与 0.4s 开场静谧入场垫音，彻底告别急促与拖沓。
-- **广播级响度**：内置 EBU R128 (`loudnorm=I=-16:TP=-1.5:LRA=11`) 动态响度标准化。
-
-### 7. 🎞️ [原生字幕长图拼接 (`native-subtitle-quote-image`)](./native-subtitle-quote-image/)
-- 将内嵌字幕视频按字幕精确帧裁切并拼接为社交平台长图，保留真实原片质感。
+| 序号 | 技能模块 | 核心定位与能力说明 |
+| :---: | :--- | :--- |
+| **01** | `xf-router` | **创作路由器**：基于用户输入意图分析，智能推荐 15 大技能的最佳主辅组合与执行路线。 |
+| **02** | `copywriting-library` | **文案素材库**：双轨带货框架（深度款 12m + 流量款 4m）与读者画像生活细节微雕标准。 |
+| **03** | `copywriting-verify-optimize` | **文案质检优化**：事实可信度、共鸣感、转化逻辑与风控 6 维打分（≥85分放行门禁）。 |
+| **04** | `publish-precheck` | **发布风控预审**：内置多平台通用违禁词/极限词规则库扫描与同义保意修复。 |
+| **05** | `ai-quote-card-maker` | **金句卡片生成**：全屏唯美意境卡片、毛玻璃排版与贴图故事号生成。 |
+| **06** | `srt-whiteboard-animation` | **白板手绘动画**：SRT 驱动的流式笔迹（ink 骨架 ➔ color 平涂）与分区遮罩揭示。 |
+| **07** | `tts-voiceover` | **TTS 配音合成**：接入主流语音 API，支持断句调优、响度标准化与音视频音画合成。 |
+| **08** | `native-subtitle-quote-image` | **原生字幕长图**：按视频内嵌字幕精确帧截取并无缝拼接为小红书/社交长图。 |
+| **09** | `competitor-deconstruct` | **同行文案拆解**：基于字数比例机械四段切分（15%/45%/80%/100%），提炼首句特征与槽位。 |
+| **10** | `viral-title-ab-tester` | **标题启发式选拔**：内置冲突度、悬念感、损失厌恶等 10 维独立启发式打分（零虚构 CTR 预测）。 |
+| **11** | `cover-visual-prompt` | **封面提示词蒸馏**：基于主题与指定风格动态生成三层景深视觉主体与生图 Prompt。 |
+| **12** | `dbs-standard-answer` | **历史同构立论**：双重证据门禁，匹配学术四要素文献引用（作者/书名/年份/ISBN），输出 8 段式短视频原型。 |
+| **13** | `smart-comment-booster` | **评论区运营**：生成作者置顶首评与透明官方问答草稿（严禁水军小号演戏与虚构作者）。 |
+| **14** | `mimeng-style-skill` | **观点文写作**：8 大写作方法论与全量真实语料句长科学实测分布统计。 |
+| **15** | `mono-color` | **单色双色海报**：机器可读设计系统（≤2 墨色、25%~55% 留白），产出 Risograph 风格底图 Prompt。 |
 
 ---
 
-## 🚀 快速上手 (Quick Start)
+## 🧪 离线验证与可复现性
 
-### 1. 环境准备
-确保已安装 Python 3.10+ 及 ffmpeg：
+本仓库内置完整的纯离线行为测试套件，不依赖外部网络或私有 API Key：
 
 ```bash
-pip install requests pillow numpy opencv-python pydub imageio-ffmpeg python-dotenv
-```
-
-### 2. 运行一键飞书同步测试
-```bash
-python copywriting-library/scripts/lark_base_sync.py --topic_dir "./copywriting-library/topics/一个人的老后/"
+# 运行 15 大技能综合质量与反向门禁测试套件
+python tests/test_new_skills_offline.py
 ```
 
 ---
 
-## 📄 开源许可证 (License)
-本项目基于 [MIT License](./LICENSE) 开源。
+## 📄 开源许可与第三方致谢 (License & Attribution)
+
+本项目核心代码与技能规范基于 **MIT License** 开源。
+
+各子模块的具体许可与致谢说明如下：
+- **核心工程与原创技能**：遵循 MIT License（见根目录 [LICENSE](LICENSE)）；
+- **`mono-color` 技能**：代码与设计系统遵循 MIT License（见 `mono-color/LICENSE`），视觉资产声明见 `mono-color/ASSET-LICENSE.md`，上游溯源见 `mono-color/UPSTREAM.json`（原作者示例图片已完全排除）；
+- **`dbs-standard-answer` 技能**：独立 clean-room 算法代码遵循 MIT License，方法论概念致谢 `dontbesilent2025/dbskill`（见 `dbs-standard-answer/NOTICE.md`）；
+- **`srt-whiteboard-animation` 与 `publish-precheck`**：遵循 MIT License（见各自目录下的 `LICENSE`）；
+- **外部依赖登记**：`weread-skills`、`dbs-video-extract` 仅作为外部规范与参考登记（见 [EXTERNAL_REFERENCES.md](EXTERNAL_REFERENCES.md)），不包含上游未授权源码。

@@ -17,7 +17,7 @@ __pycache__/
 dist/
 build/
 
-# ── 3. 渲染生成的大体积文件（视频/音频/临时生成物） ──
+# ── 3. 渲染生成的大体积文件（视频/音频/临时生成物与媒体） ──
 **/output/
 **/.tempmediaStorage/
 *.mp4
@@ -25,17 +25,33 @@ build/
 *.avi
 *.mov
 *.mkv
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ico
 aligned_temp/
 podcast_scenes_0.8/
 podcast_test/
 
-# ── 4. 版权电子书与大体积原著 ──
+# ── 4. 版权内容资产、第三方语料切片与未开源文档 ──
 *.pdf
+copywriting-library/topics/
+copywriting-library/references/benchmark-mimeng/
+xf-router/knowledge/atoms.jsonl
+srt-whiteboard-animation/assets/library/
+weread-skills/
+feishu_sync_record.json
+*.building
+recovery_manifest*
 
-# ── 5. IDE 与系统缓存 ──
+# ── 5. IDE 与系统缓存及临时审计报告 ──
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 desktop.ini
 *.log
+excluded_tracked_files*.txt

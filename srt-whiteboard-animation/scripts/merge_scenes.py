@@ -79,7 +79,7 @@ def _pyav_concat(inputs: list[Path], output: Path) -> bool:
     ostream.width, ostream.height = w, h
     ostream.pix_fmt = "yuv420p"
     ostream.options = {"crf": "22", "preset": "fast"}
-    
+
     pts_counter = 0
     for p in inputs:
         cont = av.open(str(p))

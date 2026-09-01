@@ -55,20 +55,20 @@ def render_styled_card(
 ):
     if not os.path.exists(bg_image_path):
         raise FileNotFoundError(f"背景图片不存在: {bg_image_path}")
-        
+
     bg = Image.open(bg_image_path).convert("RGBA")
     bg_w, bg_h = bg.size
-    
+
     # 缩放并居中裁切背景
     scale = max(target_width / bg_w, target_height / bg_h)
     new_w = int(bg_w * scale)
     new_h = int(bg_h * scale)
     bg_resized = bg.resize((new_w, new_h), Image.Resampling.LANCZOS)
-    
+
     left = (new_w - target_width) // 2
     top = (new_h - target_height) // 2
     canvas = bg_resized.crop((left, top, left + target_width, top + target_height))
-    
+
     lines = [line.strip() for line in content.strip().split("\n") if line.strip()]
 
     # -------------------------------------------------------------
@@ -82,14 +82,14 @@ def render_styled_card(
             alpha = int(45 + (y / target_height) * 45)
             draw_ov.line([(0, y), (target_width, y)], fill=(0, 0, 0, alpha))
         canvas = Image.alpha_composite(canvas, overlay)
-        
+
         # 字体尺寸
         font_title = get_font("", int(target_width * 0.050))
         font_body = get_font("", int(target_width * 0.033))
-        
+
         line_spacing = int(font_body.size * 1.75)
         text_total_height = int(font_title.size * 2.2) + len(lines) * line_spacing + 80
-        
+
         # 动态计算卡片尺寸与垂直居中偏上位置
         card_w = int(target_width * 0.90)
         card_h = max(int(target_height * 0.58), text_total_height + 100)
@@ -97,35 +97,35 @@ def render_styled_card(
         card_y1 = max(int(target_height * 0.10), (target_height - card_h) // 2 - int(target_height * 0.03))
         card_x2 = card_x1 + card_w
         card_y2 = card_y1 + card_h
-        
+
         # 裁剪出卡片对应的背景进行高斯模糊
         cropped_bg = canvas.crop((card_x1, card_y1, card_x2, card_y2))
         blurred_bg = cropped_bg.filter(ImageFilter.GaussianBlur(radius=30))
-        
+
         # 叠加半透明磨砂白
         card_overlay = Image.new("RGBA", (card_w, card_h), (255, 255, 255, 42))
         card_composed = Image.alpha_composite(blurred_bg, card_overlay)
-        
+
         # 绘制卡片圆角蒙版
         mask = Image.new("L", (card_w, card_h), 0)
         draw_mask = ImageDraw.Draw(mask)
         draw_mask.rounded_rectangle([0, 0, card_w, card_h], radius=32, fill=255)
-        
+
         # 将毛玻璃卡片贴回画布
         canvas.paste(card_composed.convert("RGB"), (card_x1, card_y1), mask)
-        
+
         # 绘制卡片微光细边框
         draw = ImageDraw.Draw(canvas)
         draw.rounded_rectangle([card_x1, card_y1, card_x2, card_y2], radius=32, outline=(255, 255, 255, 150), width=2)
-        
+
         # 绘制卡片内标题
         title_y = card_y1 + int(card_h * 0.12)
         draw.text((target_width // 2, title_y), title, fill="#FFFFFF", font=font_title, anchor="mm")
-        
+
         # 标题下方装饰细线
         line_w = int(card_w * 0.22)
         draw.line([(target_width // 2 - line_w // 2, title_y + 32), (target_width // 2 + line_w // 2, title_y + 32)], fill=(255, 255, 255, 120), width=2)
-        
+
         # 绘制正文
         body_y = title_y + int(card_h * 0.14)
         for line in lines:
@@ -146,15 +146,15 @@ def render_styled_card(
                 alpha = int(80 * (1 - (y - target_height * 0.65) / (target_height * 0.35)))
             draw_ov.line([(0, y), (target_width, y)], fill=(8, 12, 20, alpha))
         canvas = Image.alpha_composite(canvas, overlay)
-        
+
         draw = ImageDraw.Draw(canvas)
         font_title = get_font("", int(target_width * 0.052), serif=True)
         font_body = get_font("", int(target_width * 0.034), serif=True)
-        
+
         # 顶部电影标题
         start_y = int(target_height * 0.15)
         draw_soft_shadow_text(draw, (target_width // 2, start_y), f"「 {title} 」", font_title, fill_color="#FFFDF5")
-        
+
         # 正文
         current_y = start_y + int(target_height * 0.08)
         line_spacing = int(font_body.size * 1.85)
@@ -174,20 +174,20 @@ def auto_output_path(title: str, style: str, skill_root: str = "") -> str:
     """
     import re
     from datetime import datetime
-    
+
     if not skill_root:
         # 脚本位于 <SKILL_DIR>/scripts/ 下，Skill 根目录为往上 1 级
         skill_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    
+
     date_str = datetime.now().strftime("%Y-%m-%d")
     safe_title = re.sub(r'[\\/:*?"<>|\n\r]+', '_', title).strip(' ._') or "quote_card"
     filename = f"{safe_title}_{style}.jpg"
-    
+
     out_dir = os.path.join(skill_root, "output", date_str)
     os.makedirs(out_dir, exist_ok=True)
-    
+
     out_path = os.path.join(out_dir, filename)
-    
+
     # 同名文件自动追加序号避免覆盖
     if os.path.exists(out_path):
         base, ext = os.path.splitext(out_path)
@@ -195,7 +195,7 @@ def auto_output_path(title: str, style: str, skill_root: str = "") -> str:
         while os.path.exists(f"{base}_{idx}{ext}"):
             idx += 1
         out_path = f"{base}_{idx}{ext}"
-    
+
     return out_path
 
 
@@ -207,10 +207,10 @@ def main():
     parser.add_argument("--out", default="", help="输出路径（留空则自动归档到 output/quote-cards/YYYY-MM-DD/）")
     parser.add_argument("--style", default="glass", choices=["glass", "cinematic", "capsule"], help="排版设计风格")
     args = parser.parse_args()
-    
+
     # 若用户未指定输出路径，自动按日期归档
     output_path = args.out if args.out else auto_output_path(args.title, args.style)
-    
+
     render_styled_card(
         bg_image_path=args.bg,
         title=args.title,
